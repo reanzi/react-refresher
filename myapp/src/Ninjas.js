@@ -1,6 +1,6 @@
 import React from "react";
 
-const Ninjas = ({ ninjas }) => {
+const Ninjas = ({ ninjas, deleteNinja }) => {
   // in function comp, props is passed a parameter, accessed without 'this'
   // const { ninjas } = props;
   /*
@@ -21,11 +21,18 @@ const Ninjas = ({ ninjas }) => {
   */
   //  Conditional outiputing using turnali operator
   const ninjaList = ninjas.map(ninja => {
-    return ninja.age < 20 ? (
+    return ninja.age > 0 ? (
       <div className="ninja" key={ninja.id}>
         <div>My name: {ninja.name}</div>
         <div>My age: {ninja.age}</div>
         <div>Belt: {ninja.belt} </div>
+        <button
+          onClick={() => {
+            deleteNinja(ninja.id);
+          }}
+        >
+          Delete Ninja
+        </button>
         <hr />
       </div>
     ) : null;
