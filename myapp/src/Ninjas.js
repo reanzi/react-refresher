@@ -1,16 +1,20 @@
 import React, { Component } from "react";
 
 class Ninjas extends Component {
-  render() {
+  render(props) {
     // no need to pass props into render as it's given in class base components
-    const { name, age, belt } = this.props;
-    return (
-      <div className="ninja">
-        <div>My name: {name}</div>
-        <div>My age: {age}</div>
-        <div>Belt: {belt} </div>
-      </div>
-    );
+    const { ninjas } = this.props;
+    const ninjaList = ninjas.map(ninja => {
+      return (
+        <div className="ninja" key={ninja.id}>
+          <div>My name: {ninja.name}</div>
+          <div>My age: {ninja.age}</div>
+          <div>Belt: {ninja.belt} </div>
+          <hr />
+        </div>
+      );
+    });
+    return <div className="ninja-list">{ninjaList}</div>;
   }
 }
 
