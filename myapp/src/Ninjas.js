@@ -4,7 +4,7 @@ class Ninjas extends Component {
   render() {
     return (
       <div className="ninja">
-        <div>Name: Rahel </div>
+        <div>Name: Rahel Raymond</div>
         <div>Belt: Black </div>
       </div>
     );
