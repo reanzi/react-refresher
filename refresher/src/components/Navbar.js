@@ -1,7 +1,8 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import withRouter from "react-router-dom/withRouter";
 
-export default function Navbar() {
+const Navbar = () => {
   return (
     <nav>
       <div className="nav-wrapper nav flat teal darken-3">
@@ -20,4 +21,5 @@ export default function Navbar() {
       </div>
     </nav>
   );
-}
+};
+export default withRouter(Navbar);
