@@ -1,12 +1,14 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import withRouter from "react-router-dom/withRouter";
 
 const Navbar = () => {
   return (
     <nav>
       <div className="nav-wrapper nav flat teal darken-3">
-        <a className="brand-logo">Poke'Times</a>
+        <a href="/" className="brand-logo">
+          Poke'Times
+        </a>
         <ul className="right">
           <li>
             <NavLink to="/">Home</NavLink>
